@@ -61,7 +61,9 @@
 			new THREE.SphereGeometry(radius, segments, segments),
 			new THREE.MeshPhongMaterial({
 				//map:         THREE.ImageUtils.loadTexture('images/2_no_clouds_4k.jpg'),
-				//map:         THREE.ImageUtils.loadTexture('images/parC_2016_meanC.png'),
+				map:         THREE.ImageUtils.loadTexture('images/parC_2016_meanC.png'),
+				// new line below
+				transparent: true
 				bumpMap:     THREE.ImageUtils.loadTexture('images/elev_bump_4k.jpg'),
 				bumpScale:   0.005,
 				specularMap: THREE.ImageUtils.loadTexture('images/water_4k.png'),
