@@ -33,12 +33,17 @@
 	light.position.set(5,3,5);
 	scene.add(light);
 
+	//mesh.rotation.x += 0.005;
+	//mesh.rotation.y += 0.005
+	
     var sphere = createSphere(radius, segments);
 	//sphere.rotation.y = rotation;
+	sphere.rotation.x = rotation;
 	sphere.rotation.y = rotation;
 	scene.add(sphere)
 
     var clouds = createClouds(radius, segments);
+	clouds.rotation.x = rotation;
 	clouds.rotation.y = rotation;
 	scene.add(clouds)
 
@@ -53,8 +58,10 @@
 
 	function render() {
 		controls.update();
+		sphere.rotation.x += 0.0005;
 		sphere.rotation.y += 0.0005;
-		clouds.rotation.y += 0.0005;		
+		clouds.rotation.x += 0.0005;
+		sphere.rotation.y += 0.0005;		
 		requestAnimationFrame(render);
 		renderer.render(scene, camera);
 	}
