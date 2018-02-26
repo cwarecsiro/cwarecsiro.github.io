@@ -14,14 +14,14 @@
 	// Earth params
 	var radius   = 0.5,
 		segments = 32,
-		rotation = 6;  
+		//rotation = 6;  
+		rotation = 2;  
 
 	var scene = new THREE.Scene();
 
-	//var camera = new THREE.PerspectiveCamera(45, width / height, 0.01, 1000);
-	var camera = new THREE.PerspectiveCamera(120, width / height, 0.01, 1000);
+	var camera = new THREE.PerspectiveCamera(45, width / height, 0.01, 1000);
 	//camera.position.z = 1.5;
-	camera.position.z = 1;
+	camera.position.z = 0.5;
 
 	//var renderer = new THREE.WebGLRenderer({ alpha: true });
 	var renderer = new THREE.WebGLRenderer()
@@ -34,7 +34,7 @@
 	scene.add(light);
 
     var sphere = createSphere(radius, segments);
-	sphere.rotation.y = rotation; 
+	//sphere.rotation.y = rotation; 
 	scene.add(sphere)
 
     var clouds = createClouds(radius, segments);
