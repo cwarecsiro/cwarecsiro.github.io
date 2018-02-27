@@ -14,8 +14,8 @@
 	// Earth params
 	var radius   = 0.5,
 		segments = 32,
-		//rotation = 6;  
-		rotation = -6;  
+		rotation = 6;  
+		//rotation = -6;  
 
 	var scene = new THREE.Scene();
 
@@ -32,18 +32,15 @@
 	var light = new THREE.DirectionalLight(0xffffff, 1);
 	light.position.set(5,3,5);
 	scene.add(light);
-
-	//mesh.rotation.x += 0.005;
-	//mesh.rotation.y += 0.005
 	
     var sphere = createSphere(radius, segments);
-	//sphere.rotation.y = rotation;
-	sphere.rotation.x = rotation;
 	sphere.rotation.y = rotation;
+	//sphere.rotation.x = rotation;
+	//sphere.rotation.y = rotation;
 	scene.add(sphere)
 
     var clouds = createClouds(radius, segments);
-	clouds.rotation.x = rotation;
+	//clouds.rotation.x = rotation;
 	clouds.rotation.y = rotation;
 	scene.add(clouds)
 
@@ -58,10 +55,10 @@
 
 	function render() {
 		controls.update();
-		sphere.rotation.x += 0.0005;
+		//sphere.rotation.x += 0.0005;
 		sphere.rotation.y += 0.0005;
-		clouds.rotation.x += 0.0005;
-		sphere.rotation.y += 0.0005;		
+		clouds.rotation.y += 0.0005;
+		//sphere.rotation.y += 0.0005;		
 		requestAnimationFrame(render);
 		renderer.render(scene, camera);
 	}
@@ -71,7 +68,8 @@
 			new THREE.SphereGeometry(radius, segments, segments),
 			new THREE.MeshPhongMaterial({
 				//map:         THREE.ImageUtils.loadTexture('images/2_no_clouds_4k.jpg'),
-				map:         THREE.ImageUtils.loadTexture('images/parC_2016_Global.png'),
+				//map:         THREE.ImageUtils.loadTexture('images/parC_2016_Global.png'),
+				map:         THREE.ImageUtils.loadTexture('images/lu4webgl.png'),
 				// new line below
 				//alphaTest: 0.1,
 				bumpMap:     THREE.ImageUtils.loadTexture('images/elev_bump_4k.jpg'),
