@@ -41,7 +41,7 @@
 	scene.add(sphere)
 	*/
 		
-	
+	/*
 	// The textures to use
 	var arr = [
 	 'images/2_no_clouds_4k.jpg',
@@ -52,6 +52,7 @@
 	
 	var texture = arr[textureToShow];
 	textureToShow++;
+	*/
 	
 	var sphere = createSphere(radius, segments);
 	sphere.rotation.y = rotation;
@@ -108,7 +109,7 @@
 		return new THREE.Mesh(
 			new THREE.SphereGeometry(radius, segments, segments),
 			new THREE.MeshPhongMaterial({
-				map:         THREE.ImageUtils.loadTexture('images/lu4webgl.png),
+				map:         THREE.ImageUtils.loadTexture('images/lu4webgl.png'),
 				//map:         THREE.ImageUtils.loadTexture('images/parC_2016_Global.png'),
 				//map:         THREE.ImageUtils.loadTexture('images/lu4webgl.png'),
 				// new line below
