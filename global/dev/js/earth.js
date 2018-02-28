@@ -58,14 +58,14 @@
 	//scene.add(sphere);
 	
 	//USE THIS
-	var material = new new THREE.MeshPhongMaterial({
+	var material = new THREE.MeshPhongMaterial({
 		bumpMap:     THREE.ImageUtils.loadTexture('images/elev_bump_4k.jpg'),
 				bumpScale:   0.005,
 				specularMap: THREE.ImageUtils.loadTexture('images/water_4k.png'),
 				specular:    new THREE.Color('grey')								
 			});
 	var geometry = new THREE.SphereGeometry(radius, segments, segments);
-    var sphere = new THREE.Mesh(geometry, material)
+    var sphere = new THREE.Mesh(geometry, material);
 	sphere.rotation.y = rotation;
 	//sphere.rotation.x = rotation;
 	//sphere.rotation.y = rotation;
