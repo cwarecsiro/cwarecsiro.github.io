@@ -190,6 +190,11 @@
 	  if(textureToShow > arr.length-1) {
 	   textureToShow = 0;
 	  }
+	  var sphere = createSphere(radius, segments, texture);
+	  sphere.rotation.y = rotation;
+	  //sphere.rotation.x = rotation;
+	  //sphere.rotation.y = rotation;
+	  scene.add(sphere);
 	 }); 
 	
 }());
