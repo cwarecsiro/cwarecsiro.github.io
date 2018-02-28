@@ -73,7 +73,7 @@
 	
 	render();
 
-	/*
+	
 	function render() {
 		controls.update();
 		//sphere.rotation.x += 0.0005;
@@ -83,7 +83,7 @@
 		requestAnimationFrame(render);
 		renderer.render(scene, camera);
 	}
-	*/
+	
 
 	/* REPLACE THIS WITH A TEXTURE ARG
 	function createSphere(radius, segments) {
