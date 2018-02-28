@@ -50,14 +50,42 @@
 	];
 	var textureToShow = 0;
 	
-	var texture = arr[textureToShow];
-	textureToShow++;
+		
+	//var sphere = createSphere(radius, segments);
+	//sphere.rotation.y = rotation;
+	//sphere.rotation.x = rotation;
+	//sphere.rotation.y = rotation;
+	//scene.add(sphere);
 	
-	var sphere = createSphere(radius, segments);
+	//USE THIS
+	var material = new new THREE.MeshPhongMaterial({
+		bumpMap:     THREE.ImageUtils.loadTexture('images/elev_bump_4k.jpg'),
+				bumpScale:   0.005,
+				specularMap: THREE.ImageUtils.loadTexture('images/water_4k.png'),
+				specular:    new THREE.Color('grey')								
+			});
+	var geometry = new THREE.SphereGeometry(radius, segments, segments);
+    var sphere = new THREE.Mesh(geometry, material)
 	sphere.rotation.y = rotation;
 	//sphere.rotation.x = rotation;
 	//sphere.rotation.y = rotation;
-	scene.add(sphere);
+	// instantiate a texture loader
+	
+	var loader = new THREE.TextureLoader();
+	//allow cross origin loading
+	loader.crossOrigin = '';
+	
+	// Then load the texture
+	loader.load(arr[textureToShow], function(tex) {
+	 // Once the texture has loaded
+	 // Asign it to the material
+	 material.map = tex;
+	 // Update the next texture to show
+	 textureToShow++;
+	 // Add the mesh into the scene
+	 scene.add( sphere );
+	});
+	
 	
     var clouds = createClouds(radius, segments);
 	//clouds.rotation.x = rotation;
@@ -104,6 +132,7 @@
 	}
 	*/
 	
+	/*
 	function createSphere(radius, segments) {
 		return new THREE.Mesh(
 			new THREE.SphereGeometry(radius, segments, segments),
@@ -120,7 +149,7 @@
 			})
 		);
 	}
-	
+	*/
 	
 	function createClouds(radius, segments) {
 		return new THREE.Mesh(
@@ -145,56 +174,26 @@
 	
 	// ADD CHANGE TEXTURE ON CLICK?
 
-	/*
-	// instantiate a texture loader
-	var loader = new THREE.TextureLoader();
-	//allow cross origin loading
-	loader.crossOrigin = '';
-	*/
-
-	// Load the first texture
-	
-	/* DONT THINK I NEED THIS
-	// Instantiate the material we will be using
-	var material = new THREE.MeshBasicMaterial();
-	// Instantiate a geometry to use
-	var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-	// Instatiate the mesh with the geometry and material
-	var cube = new THREE.Mesh( geometry, material );
-	cube.position.y = 0.5;
-	*/
-	
-	/* MODIFY AND MOVE THIS ABOVE
-	// Then load the texture
-	loader.load(arr[textureToShow], function(tex) {
-	 // Once the texture has loaded
-	 // Asign it to the material
-	 material.map = tex;
-	 // Update the next texture to show
-	 textureToShow++;
-	 // Add the mesh into the scene
-	 scene.add( cube );
-	});
-	*/
-	
-	sphere.map = arr[textureToShow];
 	
 	// Click interaction
 	var canvas = document.getElementsByTagName("canvas")[0];
 
 	canvas.addEventListener("click", function() {
 	  
-	  //loader.load(arr[textureToShow], function(tex) {
+
+	 
+	 loader.load(arr[textureToShow], function(tex) {
 	  // Once the texture has loaded
 	  // Asign it to the material
-	  //material.map = tex;
+	  material.map = tex;
 	  // Update the next texture to show
 	  textureToShow++;
 	  // Have we got to the end of the textures array
 	  if(textureToShow > arr.length-1) {
 	   textureToShow = 0;
 	  }
-	  sphere.map = arr[textureToShow];
 	 }); 
+ 
+});
 	
 }());
