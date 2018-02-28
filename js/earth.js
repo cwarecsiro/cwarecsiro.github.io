@@ -70,7 +70,8 @@
 	var controls = new THREE.TrackballControls(camera);
 
 	webglEl.appendChild(renderer.domElement);
-
+	
+	/*
 	render();
 
 	function render() {
@@ -82,6 +83,7 @@
 		requestAnimationFrame(render);
 		renderer.render(scene, camera);
 	}
+	*/
 
 	/* REPLACE THIS WITH A TEXTURE ARG
 	function createSphere(radius, segments) {
