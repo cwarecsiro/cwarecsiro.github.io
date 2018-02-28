@@ -53,7 +53,7 @@
 	var texture = arr[textureToShow];
 	textureToShow++;
 	
-	var sphere = createSphere(radius, segments, texture);
+	var sphere = createSphere(radius, segments);
 	sphere.rotation.y = rotation;
 	//sphere.rotation.x = rotation;
 	//sphere.rotation.y = rotation;
@@ -104,11 +104,11 @@
 	}
 	*/
 	
-	function createSphere(radius, segments, texture) {
+	function createSphere(radius, segments) {
 		return new THREE.Mesh(
 			new THREE.SphereGeometry(radius, segments, segments),
 			new THREE.MeshPhongMaterial({
-				map:         THREE.ImageUtils.loadTexture(texture),
+				map:         THREE.ImageUtils.loadTexture(),
 				//map:         THREE.ImageUtils.loadTexture('images/parC_2016_Global.png'),
 				//map:         THREE.ImageUtils.loadTexture('images/lu4webgl.png'),
 				// new line below
@@ -177,6 +177,8 @@
 	});
 	*/
 	
+	sphere.map = arr[textureToShow];
+	
 	// Click interaction
 	var canvas = document.getElementsByTagName("canvas")[0];
 
@@ -192,11 +194,7 @@
 	  if(textureToShow > arr.length-1) {
 	   textureToShow = 0;
 	  }
-	  var sphere = createSphere(radius, segments, texture);
-	  sphere.rotation.y = rotation;
-	  //sphere.rotation.x = rotation;
-	  //sphere.rotation.y = rotation;
-	  scene.add(sphere);
+	  sphere.map = arr[textureToShow];
 	 }); 
 	
 }());
