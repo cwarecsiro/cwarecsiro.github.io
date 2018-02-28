@@ -71,9 +71,9 @@
 
 	webglEl.appendChild(renderer.domElement);
 	
-	/*
 	render();
 
+	/*
 	function render() {
 		controls.update();
 		//sphere.rotation.x += 0.0005;
