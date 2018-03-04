@@ -1,7 +1,7 @@
 var startDate = new Date("2008-01-01");
 startDate.setUTCHours(0, 0, 0, 0);
 
-alert(startDate); //Date() = Sun Mar 04 2018 11:00:00
+//alert(startDate); //Date() = Sun Mar 04 2018 11:00:00
 
 /*
 var startDateFormatted = startDate.toISOString().substring(0,10).replace(/-/g, '');
