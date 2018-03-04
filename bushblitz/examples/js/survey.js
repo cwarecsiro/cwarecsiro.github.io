@@ -43,6 +43,7 @@ var portusLayer = L.tileLayer('http://portus.puertos.es/Portus//pathtiles/wave/M
 });
 */
 
+/* should be good...
 var portusLayer = L.tileLayer('//hpc.csiro.au/users/454600/{d}{h}//{z}/{x}/{y}.png', {
     attribution: '@MMT',
 	//'&copy; <a href="http://portus.puertos.es/Portus_RT/">Agencia Estatal de Meteorología (AEMET) y Puertos del Estado (OPPE)</a>',
@@ -52,6 +53,7 @@ var portusLayer = L.tileLayer('//hpc.csiro.au/users/454600/{d}{h}//{z}/{x}/{y}.p
 
 var portusTimeLayer = L.timeDimension.layer.tileLayer.portus(portusLayer, {});
 
+To here */ 
 
 /*
 portusLayer.onAdd = function(eventLayer){
@@ -70,21 +72,25 @@ var portusBalLayer = L.tileLayer('http://portus.puertos.es/Portus//pathtiles/wav
 var portusBalTimeLayer = L.timeDimension.layer.tileLayer.portus(portusBalLayer, {});
 */
 
+/* should be good
 var overlayMaps = {
     "Mediterranean wave": portusTimeLayer,
 	//"Balearic wave": portusBalTimeLayer,
 };
-
+to here */
 
 var baseLayers = L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     });
 
 //var baseLayers = getCommonBaseLayers(map); // see baselayers.js
-L.control.layers(baseLayers, overlayMaps).addTo(map);
+//L.control.layers(baseLayers, overlayMaps).addTo(map);
+L.control.layers(baseLayers).addTo(map);
 
-
+/* undo this later
 portusTimeLayer.addTo(map);
+*/
+
 //portusBalTimeLayer.addTo(map);
 
 /*
