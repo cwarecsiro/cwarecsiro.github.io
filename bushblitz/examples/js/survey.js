@@ -43,7 +43,7 @@ var portusLayer = L.tileLayer('http://portus.puertos.es/Portus//pathtiles/wave/M
 });
 */
 
-var portusLayer = L.tileLayer('http://hpc.csiro.au/users/454600/454600/{d}{h}//{z}/{x}/{y}.png', {
+var portusLayer = L.tileLayer('https://hpc.csiro.au/users/454600/454600/{d}{h}//{z}/{x}/{y}.png', {
     attribution: '@MMT',
 	//'&copy; <a href="http://portus.puertos.es/Portus_RT/">Agencia Estatal de Meteorología (AEMET) y Puertos del Estado (OPPE)</a>',
     tms: true,
@@ -76,7 +76,7 @@ var overlayMaps = {
 };
 
 
-var baseLayers = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+var baseLayers = L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     });
 
