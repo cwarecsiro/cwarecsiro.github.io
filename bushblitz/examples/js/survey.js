@@ -1,7 +1,7 @@
 var startDate = new Date("2008-01-01");
 startDate.setUTCHours(0, 0, 0, 0);
 
-//alert(startDate); //Date() = Sun Mar 04 2018 11:00:00
+alert(startDate); //Date() = Sun Mar 04 2018 11:00:00
 
 /*
 var startDateFormatted = startDate.toISOString().substring(0,10).replace(/-/g, '');
@@ -43,7 +43,7 @@ var portusLayer = L.tileLayer('http://portus.puertos.es/Portus//pathtiles/wave/M
 });
 */
 
-/* should be good...
+ should be good...
 var portusLayer = L.tileLayer('//hpc.csiro.au/users/454600/{d}{h}//{z}/{x}/{y}.png', {
     attribution: '@MMT',
 	//'&copy; <a href="http://portus.puertos.es/Portus_RT/">Agencia Estatal de Meteorología (AEMET) y Puertos del Estado (OPPE)</a>',
@@ -51,9 +51,9 @@ var portusLayer = L.tileLayer('//hpc.csiro.au/users/454600/{d}{h}//{z}/{x}/{y}.p
     maxZoom: 10,
 });
 
+/* this should work...
 var portusTimeLayer = L.timeDimension.layer.tileLayer.portus(portusLayer, {});
-
-To here */ 
+*/
 
 /*
 portusLayer.onAdd = function(eventLayer){
@@ -72,20 +72,18 @@ var portusBalLayer = L.tileLayer('http://portus.puertos.es/Portus//pathtiles/wav
 var portusBalTimeLayer = L.timeDimension.layer.tileLayer.portus(portusBalLayer, {});
 */
 
-/* should be good
 var overlayMaps = {
     "Mediterranean wave": portusTimeLayer,
 	//"Balearic wave": portusBalTimeLayer,
 };
-to here */
 
 var baseLayers = L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     });
 
 //var baseLayers = getCommonBaseLayers(map); // see baselayers.js
-//L.control.layers(baseLayers, overlayMaps).addTo(map);
-L.control.layers(baseLayers).addTo(map);
+L.control.layers(baseLayers, overlayMaps).addTo(map);
+//L.control.layers(baseLayers).addTo(map);
 
 /* undo this later
 portusTimeLayer.addTo(map);
