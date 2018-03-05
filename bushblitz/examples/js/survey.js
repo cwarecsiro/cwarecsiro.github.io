@@ -72,9 +72,16 @@ var portusBalTimeLayer = L.timeDimension.layer.tileLayer.portus(portusBalLayer, 
 */
 
 var overlayMaps = {
+    "Mediterranean wave": portusLayer,
+	//"Balearic wave": portusBalTimeLayer,
+};
+
+/*
+var overlayMaps = {
     "Mediterranean wave": portusTimeLayer,
 	//"Balearic wave": portusBalTimeLayer,
 };
+*/
 
 var baseLayers = L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
