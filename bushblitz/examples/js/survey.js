@@ -87,7 +87,16 @@ var overlayMaps = {
 //        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 //   });
 
-var baseLayers = getCommonBaseLayers(map); // see baselayers.js
+
+var OSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMaps'
+        });
+		
+
+//var baseLayers = getCommonBaseLayers(map); // see baselayers.js
+var baseLayers = {
+	"osm": OSM,
+};
 L.control.layers(baseLayers, overlayMaps).addTo(map);
 //L.control.layers(baseLayers).addTo(map);
 
