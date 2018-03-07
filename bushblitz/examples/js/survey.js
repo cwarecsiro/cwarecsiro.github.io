@@ -43,7 +43,7 @@ var portusLayer = L.tileLayer('http://portus.puertos.es/Portus//pathtiles/wave/M
 });
 */
 
-var portusLayer = L.tileLayer('//hpc.csiro.au/users/454600/{d}{h}//{z}/{x}/{y}.png', {
+var portusLayer = L.tileLayer('https://hpc.csiro.au/users/454600/{d}{h}//{z}/{x}/{y}.png', {
     attribution: '@MMT',
 	//'&copy; <a href="http://portus.puertos.es/Portus_RT/">Agencia Estatal de Meteorología (AEMET) y Puertos del Estado (OPPE)</a>',
     //tms: true,
