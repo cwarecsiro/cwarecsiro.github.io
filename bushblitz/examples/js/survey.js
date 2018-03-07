@@ -16,7 +16,7 @@ var startDateFormatted = startDate.toISOString().substring(0,10).replace(/-/g, '
 
 var map = L.map('map', {
     //zoom: 7,
-	zoom: 4,
+	zoom: 2,
     fullscreenControl: true,
     timeDimensionControl: true,
     timeDimensionControlOptions: {
@@ -47,7 +47,8 @@ var portusLayer = L.tileLayer('https://hpc.csiro.au/users/454600/{d}{h}//{z}/{x}
     attribution: '@MMT',
 	//'&copy; <a href="http://portus.puertos.es/Portus_RT/">Agencia Estatal de Meteorología (AEMET) y Puertos del Estado (OPPE)</a>',
     tms: true,
-    maxZoom: 10,
+    maxZoom: 6,
+	minZoom: 1,
 });
 
 //this should work...
