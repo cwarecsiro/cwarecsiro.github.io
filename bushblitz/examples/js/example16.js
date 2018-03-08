@@ -1,4 +1,6 @@
 var startDate = new Date("2008-01-01");
+//var startDate = new Date("2008-01-01");
+
 startDate.setUTCHours(0, 0, 0, 0);
 
 /*
