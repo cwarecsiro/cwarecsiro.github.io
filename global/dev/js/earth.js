@@ -19,9 +19,9 @@
 
 	var scene = new THREE.Scene();
 
-	var camera = new THREE.PerspectiveCamera(45, width / height, 0.01, 1000);
-	camera.position.z = 1.5;
-	camera.position.y = 45;
+	var camera = new THREE.PerspectiveCamera(70, width / height, 1, 1000);
+	//camera.position.z = 1.5;
+	//camera.position.y = 45;
 	//camera.position.z = 0.1;
 
 	//var renderer = new THREE.WebGLRenderer({ alpha: true });
