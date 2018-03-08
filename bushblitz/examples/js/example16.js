@@ -1,4 +1,4 @@
-var startDate = new Date();
+var startDate = new Date("2008-01-01");
 startDate.setUTCHours(0, 0, 0, 0);
 
 /*
@@ -33,22 +33,21 @@ var map = L.map('map', {
 });
 
 
-
+/*
 var portusLayer = L.tileLayer('http://portus.puertos.es/Portus//pathtiles/wave/MED/VHM0/{d}{h}/map//{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://portus.puertos.es/Portus_RT/">Agencia Estatal de Meteorología (AEMET) y Puertos del Estado (OPPE)</a>',
     tms: true,
     maxZoom: 7,
 });
+*/
 
-
-/*
-var portusLayer = L.tileLayer('file://///ces-10-cdc/OSM_CDC_R38141_BushBlitz_work/Eureka/outputs/interactive/data/q1/AMP/local/rgb/{d}{h}/2018030101BASE//{z}/{x}/{y}.png', {
+var portusLayer = L.tileLayer('http://hpc.csiro.au/users/454600/AMP/local/{d}{h}//{z}/{x}/{y}.png', {
     attribution: '@MMT',
 	//'&copy; <a href="http://portus.puertos.es/Portus_RT/">Agencia Estatal de Meteorología (AEMET) y Puertos del Estado (OPPE)</a>',
     tms: true,
-    maxZoom: 10,
+    maxZoom: 6,
 });
-*/
+
 
 var portusTimeLayer = L.timeDimension.layer.tileLayer.portus(portusLayer, {});
 
