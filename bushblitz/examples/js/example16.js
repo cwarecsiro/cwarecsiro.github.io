@@ -33,13 +33,14 @@ var map = L.map('map', {
 });
 
 
-/*
+
 var portusLayer = L.tileLayer('http://portus.puertos.es/Portus//pathtiles/wave/MED/VHM0/{d}{h}/map//{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://portus.puertos.es/Portus_RT/">Agencia Estatal de Meteorología (AEMET) y Puertos del Estado (OPPE)</a>',
     tms: true,
     maxZoom: 7,
 });
-*/
+
+/*
 
 var portusLayer = L.tileLayer('http://hpc.csiro.au/users/454600/AMP/local/{d}{h}//{z}/{x}/{y}.png', {
     attribution: '@MMT',
@@ -47,7 +48,7 @@ var portusLayer = L.tileLayer('http://hpc.csiro.au/users/454600/AMP/local/{d}{h}
     tms: true,
     maxZoom: 6,
 });
-
+*/
 
 var portusTimeLayer = L.timeDimension.layer.tileLayer.portus(portusLayer, {});
 
