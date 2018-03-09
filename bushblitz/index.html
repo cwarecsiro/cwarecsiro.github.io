@@ -13,10 +13,10 @@
 		<!-- button stuff? -->
 		
 		<!-- spin while wait -->
-		<!--<script src="https://makinacorpus.github.io/Leaflet.Spin/leaflet/dist/leaflet.js"></script>
-		<script src="https://makinacorpus.github.io/Leaflet.Spin/leaflet.spin.min.js"></script>-->
-		<link rel="stylesheet" href="https://eclipse1979.github.io/leaflet-loader/dist/leaflet.loader.css" />
-		<script src="https://eclipse1979.github.io/leaflet-loader/dist/leaflet.loader.js"></script>
+		<!--<script src="http://makinacorpus.github.io/Leaflet.Spin/leaflet/dist/leaflet.js"></script>
+		<script src="http://makinacorpus.github.io/Leaflet.Spin/leaflet.spin.min.js"></script>-->
+		<link rel="stylesheet" href="http://eclipse1979.github.io/leaflet-loader/dist/leaflet.loader.css" />
+		<script src="http://eclipse1979.github.io/leaflet-loader/dist/leaflet.loader.js"></script>
 		
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		
@@ -69,17 +69,17 @@
 
 	// add basemap  
 	
-	addLayer(L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'), 'Base Map', -1);
+	addLayer(L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'), 'Base Map', -1);
 	
 	// here are the new layers we're going to add
 	/*
-	var layers =  [L.tileLayer('https://hpc.csiro.au/users/454600/AMP/local/200801011000/{z}/{x}/{y}.png', {
+	var layers =  [L.tileLayer('http://hpc.csiro.au/users/454600/AMP/local/200801011000/{z}/{x}/{y}.png', {
 					tms: true,
 					}),
-		  L.tileLayer('https://hpc.csiro.au/users/454600/AMP/local/200801011400/{z}/{x}/{y}.png', {
+		  L.tileLayer('http://hpc.csiro.au/users/454600/AMP/local/200801011400/{z}/{x}/{y}.png', {
 					tms: true
 					}),
-			L.tileLayer('https://hpc.csiro.au/users/454600/AMP/local/201601011100/{z}/{x}/{y}.png', {
+			L.tileLayer('http://hpc.csiro.au/users/454600/AMP/local/201601011100/{z}/{x}/{y}.png', {
 					tms: true
 					}),
 		  ];
@@ -87,66 +87,66 @@
 	
 	//init maps
 	var taxa = 'AMP';
-	var layers =  [L.tileLayer('https://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_base_2009_Sep_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
+	var layers =  [L.tileLayer('http://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_base_2009_Sep_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
 					tms: true,
 					}),
-					L.tileLayer('https://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_all_2009_Sep_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
+					L.tileLayer('http://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_all_2009_Sep_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
 					tms: true,
 					}),
 		  
-					L.tileLayer('https://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_base_2009_Dec_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
+					L.tileLayer('http://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_base_2009_Dec_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
 					tms: true,
 					}),
-					L.tileLayer('https://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_all_2009_Dec_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
+					L.tileLayer('http://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_all_2009_Dec_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
 					tms: true,
 					}),
 									
-					L.tileLayer('https://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_base_2010_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
+					L.tileLayer('http://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_base_2010_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
 					tms: true,
 					}),
-					L.tileLayer('https://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_all_2010_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
-					tms: true,
-					}),
-					
-					L.tileLayer('https://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_base_2011_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
-					tms: true,
-					}),
-					L.tileLayer('https://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_all_2011_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
+					L.tileLayer('http://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_all_2010_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
 					tms: true,
 					}),
 					
-					L.tileLayer('https://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_base_2012_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
+					L.tileLayer('http://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_base_2011_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
 					tms: true,
 					}),
-					L.tileLayer('https://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_all_2012_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
-					tms: true,
-					}),
-					
-					L.tileLayer('https://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_base_2013_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
-					tms: true,
-					}),
-					L.tileLayer('https://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_all_2013_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
+					L.tileLayer('http://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_all_2011_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
 					tms: true,
 					}),
 					
-					L.tileLayer('https://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_base_2014_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
+					L.tileLayer('http://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_base_2012_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
 					tms: true,
 					}),
-					L.tileLayer('https://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_all_2014_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
-					tms: true,
-					}),
-					
-					L.tileLayer('https://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_base_2015_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
-					tms: true,
-					}),
-					L.tileLayer('https://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_all_2015_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
+					L.tileLayer('http://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_all_2012_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
 					tms: true,
 					}),
 					
-					L.tileLayer('https://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_base_2016_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
+					L.tileLayer('http://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_base_2013_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
 					tms: true,
 					}),
-					L.tileLayer('https://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_all_2016_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
+					L.tileLayer('http://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_all_2013_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
+					tms: true,
+					}),
+					
+					L.tileLayer('http://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_base_2014_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
+					tms: true,
+					}),
+					L.tileLayer('http://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_all_2014_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
+					tms: true,
+					}),
+					
+					L.tileLayer('http://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_base_2015_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
+					tms: true,
+					}),
+					L.tileLayer('http://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_all_2015_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
+					tms: true,
+					}),
+					
+					L.tileLayer('http://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_base_2016_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
+					tms: true,
+					}),
+					L.tileLayer('http://hpc.csiro.au/users/454600/' + taxa + '/local/' + 'AMP0025_r1_all_2016_xy_local_DIVSUMSIM_RGB/{z}/{x}/{y}.png',{
 					tms: true,
 					}),
 			];
@@ -247,8 +247,8 @@
 	//var nexrad = L.tileLayer('file://///ces-10-cdc/OSM_CDC_R38141_BushBlitz_work/Eureka/outputs/interactive/data/q1/AMP/test_dec_2009/{z}/{x}/{y}.png', {
 							       //"\\ces-10-cdc\OSM_CDC_R38141_BushBlitz_work\Eureka\outputs\interactive\data\q1\AMP\local\rgb\2018022303\2018030101BASE"
 	//var nexrad = L.tileLayer('file://///ces-10-cdc/OSM_CDC_R38141_BushBlitz_work/Eureka/outputs/interactive/data/q1/AMP/archive/NONBB/{z}/{x}/{y}.png', {
-	//var nexrad = L.tileLayer('https://hpc.csiro.au/users/454600/2008010111/{z}/{x}/{y}.png', { ## works but the images are munted
-	var nexrad = L.tileLayer('https://hpc.csiro.au/users/454600/AMP/local/200801011100//{z}/{x}/{y}.png', {
+	//var nexrad = L.tileLayer('http://hpc.csiro.au/users/454600/2008010111/{z}/{x}/{y}.png', { ## works but the images are munted
+	var nexrad = L.tileLayer('http://hpc.csiro.au/users/454600/AMP/local/200801011100//{z}/{x}/{y}.png', {
 		//minZoom: 1,
 		//nexrad.crossOrigin = "anonymous",
 		maxZoom: 6,
@@ -257,7 +257,7 @@
 	});
 	
 	
-	 var layer1 = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	 var layer1 = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMaps'
      });
 	
@@ -281,7 +281,7 @@
 	*/
 	
 	/* WMS LAYER
-	var nexrad = L.tileLayer.wms("https://localhost:8080/geoserver/bushblitz/wms?", {
+	var nexrad = L.tileLayer.wms("http://localhost:8080/geoserver/bushblitz/wms?", {
 		layers: 'bushblitz:geotiff_coverage',
 		format: 'image/png',
 		transparent: true,
