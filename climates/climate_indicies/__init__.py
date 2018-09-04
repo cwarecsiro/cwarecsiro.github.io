@@ -1,1 +1,0 @@
-""" climate indicies routines """
